@@ -20,7 +20,8 @@ RUN update-alternatives --set php /usr/bin/php5.6
 
 # Get cURL, git, Node.js/NPM
 RUN apt-get install -y curl
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
+RUN chmod 0777 /usr/local/bin
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN apt-get install -y git
 RUN apt-get install -y nodejs npm
 
