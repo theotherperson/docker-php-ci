@@ -18,8 +18,8 @@ RUN apt-get install -y php5.6
 RUN apt-get install -y  php-pear php5.6-curl php5.6-dev php5.6-gd php5.6-mbstring php5.6-zip php5.6-mysql php5.6-xml libapache2-mod-php5.6
 RUN update-alternatives --set php /usr/bin/php5.6
 
-# Get cURL, git, Node.js/NPM
-RUN apt-get install -y curl
+# Get cURL, git, Node.js/NPM, sendmail
+RUN apt-get install -y curl sendmail
 RUN chmod 0777 /usr/local/bin
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN apt-get install -y git
